@@ -50,5 +50,8 @@ make run
 References
 
 [1] Linux Kernel Media Subsystem (V4L2) Documentation
+
 [2] libjpeg-turbo API Documentation
+
 [3] x264 Encoder Settings Guide
+
