@@ -37,6 +37,7 @@ sudo apt install build-essential libjpeg-dev libx264-dev libv4l-dev ffmpeg
 
 
 How to Build & Run
+
 A simple Makefile is provided to compile the project and launch the pipeline.
 
 Compile the binary:
