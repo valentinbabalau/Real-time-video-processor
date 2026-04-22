@@ -18,7 +18,7 @@ V4L2 Capture (Zero-Copy):
 The pipeline initializes by opening the camera device node (e.g., /dev/video0) in non-blocking mode. To achieve a low latency, the application maps the kernel buffers directly into the user-space memory (mmap) rather than using standard file I/O operations. This stage utilizes the Video for Linux 2 (V4L2) API [1].
 
 MJPEG Decoding:
-Most USB webcams provide frames in a compressed MJPEG format. To process the pixels, the frames are decoded entirely in RAM. The pipeline instructs libjpeg [2] to extract the data directly into the native YCbCr (YUV) color space, deliberately bypassing RGB conversion to save CPU cycles and prevent round-off color errors (e.g., sepia tones).
+Webcam provide frames in a compressed MJPEG format. To process the pixels, the frames are decoded entirely in RAM. The pipeline instructs libjpeg [2] to extract the data directly into the native YUV color space, deliberately bypassing RGB conversion to save CPU cycles and prevent round-off color errors (e.g., sepia tones).
 
 Transformation & H.264 Encoding:
 The uncompressed YUV data passes through a custom transfomartion loop where the scaling, flipping, and color inversion take place. Immediately after, the libx264 API [3] encodes the processed planes into an H.264 stream.
