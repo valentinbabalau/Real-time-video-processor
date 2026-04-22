@@ -4,7 +4,7 @@ This project implements a bare-metal, real-time video processing pipeline in C. 
 
 Transformations Applied:
 
-Scale: 2x Downscale (Nearest Neighbor).
+Scale: 2x Downscale
 
 Flip: Horizontal mirroring.
 
