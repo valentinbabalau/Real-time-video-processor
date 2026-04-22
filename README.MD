@@ -32,15 +32,19 @@ To compile and run this application, you need the standard C build tools and the
 The following dependencies needs to be installed in order to run the application
 
 sudo apt update
+
 sudo apt install build-essential libjpeg-dev libx264-dev libv4l-dev ffmpeg
+
 
 How to Build & Run
 A simple Makefile is provided to compile the project and launch the pipeline.
 
 Compile the binary:
+
 make
 
 Run:
+
 make run
 
 References
